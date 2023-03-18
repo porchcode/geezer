@@ -43,3 +43,30 @@ yell()
     Update()
 }
 ```
+
+## how's this thing work?
+
+Oh, you want documentation? Get bent. Just start typing, and follow the code. Back in my day there was never any documentation, and you just learned to view source.
+
+## stop whining and start coding
+
+Ready to roll? Here's your installation:
+
+```console
+brew install geezer
+```
+
+Then create a new app:
+
+```console
+geezer get-bent MillionDollarsAndAJet
+```
+
+Ready to run?
+
+```console
+cd ./MillionDollarsAndAJet
+geezer giddyup
+```
+
+Bam, you've got an app! Ya happy now?! Kids these days...
