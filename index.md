@@ -1,3 +1,41 @@
-![geezer](images/geezer-header.svg)
+We've been building apps for far too long to be bothered with convincing you that we know what you're doing and that you should listen to us. Do it or don't. Don't care.
 
-# get off my lawn
+If you want to build robust, scalable, performant apps for Android, iOS, Linux, macOS, Web, and Windows AND have a laugh while you're at it, then use geezer. Or don't. Don't care.
+
+## get off my lawn
+
+There's one code file format in geezer, just one, and it's `.goml`. Yup, that's short for "get off my lawn" and it looks like this:
+
+```
+<PageTitle>The Front Porch</PageTitle>
+
+<geezerSays name="theGeezer">@say</geezerSays>
+
+<button ontap="@yell">Yell</button>
+```
+
+## you'll poke your eye out
+
+State management is a pita for any app, so let's make it dead simple. All state is immutable, which is fancy talk for you can't change it willy nilly and think you're app is gonna be just hunky dory. Nope. 
+
+When you need to update state, say if somebody actually decides to use your silly little app, then you send the value to the update method and a new state is created triggering the UI to render only the bit that changed. It's super fast. Don't be clever, just call update state.
+
+```
+<PageTitle>The Front Porch</PageTitle>
+
+<geezerSays name="theGeezer">@say</geezerSays>
+
+<button ontap="@yell">Yell</button>
+
+@code {
+    State model = {
+                string say = "What a beautiful morning"
+            }
+
+    private void yell()
+    {
+        model.say = "Get off my lawn!"
+        Update()
+    }
+}
+```
